@@ -7,14 +7,14 @@ const Login = lazy(() => import("../pages/Login"));
 
 export default function Layout() {
   return (
-    <ErrorBoundary>
-      <BrowserRouter>
+    <BrowserRouter>
+      <ErrorBoundary>
         <ScrollTop />
         <Routes>
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
         </Routes>
-      </BrowserRouter>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </BrowserRouter>
   );
 }
